@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./index.js",
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "create-db": "./node_modules/.bin/sequelize db:create",
+    "migrate-db": "./node_modules/.bin/sequelize db:migrate"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,9 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
   }
 }
