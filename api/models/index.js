@@ -1,6 +1,7 @@
 // const { Sequelize } = require("sequelize/types");
 
 const config = require(__dirname + '/../../db/config.js');
+const path = require('path')
 const fs = require('fs');
 const Sequelize = require('sequelize');
 
@@ -15,7 +16,7 @@ if (config.use_env_variable) {
 }
 
 const modelUser = require('./curso');
-db.curso = modelUser(sequelize, Sequelize.dataTypes);
+db.curso = modelUser(sequelize, Sequelize.DataTypes);
 
 // fs 
 //   .readdirSync(__dirname)
