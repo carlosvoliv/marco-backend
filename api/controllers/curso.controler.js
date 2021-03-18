@@ -5,6 +5,10 @@ const getAllCursos = (req, res, next) => {
     {
       id: 356,
       name: 'teste mockeado'
+    },
+    {
+      id: 6,
+      name: 'teste hackeado'
     }
   ])
 }

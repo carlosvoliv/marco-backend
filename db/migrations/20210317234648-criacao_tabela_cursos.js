@@ -9,10 +9,14 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      coordinator: {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      name: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },      
       start_date: {
         allowNull: false,
         type: Sequelize.DATE
@@ -26,6 +30,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('cursos');
+    return queryInterface.dropTable('cursos');  
   }
 };
