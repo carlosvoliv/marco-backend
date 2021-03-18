@@ -15,8 +15,8 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-const modelUser = require('./curso');
-db.curso = modelUser(sequelize, Sequelize.DataTypes);
+const modelCurso = require('./curso');
+db.curso = modelCurso(sequelize, Sequelize.DataTypes);
 
 // fs 
 //   .readdirSync(__dirname)

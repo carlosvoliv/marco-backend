@@ -6,4 +6,9 @@ module.exports = (router) => {
     .get(
       cursosController.getAllCursos
     )
+
+  router.route('/curso/:idcurso')
+    .get(
+      cursosController.getCursoById
+    )
 }
