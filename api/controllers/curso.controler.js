@@ -31,12 +31,19 @@ const getCursoById = (req, res) => {
   console.log(req.params);
 
   db.curso.findOne({
-    attributes: ['name', 'coordinator', 'status'],
+    // attributes: ['name', 'coordinator', 'start_date'],
     where: {
       id: req.params.idcurso
     }
   }).then((result) => {
-    res.status(200).send({result})
+
+    console.log(result);
+    res.status(200).send({
+      id: result.id,
+      name: result.name,
+      coordinator: result.coordinator,
+      start_date: result.start_date
+    })
   })
   
   
